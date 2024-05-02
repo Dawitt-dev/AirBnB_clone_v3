@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """module for the api"""
 from flask import Flask, jsonify, Blueprint
+from flask_cors import CORS
 from models import storage
 from api.v1.views import app_views
 import os
@@ -8,6 +9,9 @@ from os import getenv
 
 app = Flask(__name__)
 app.register_blueprint(app_views)
+
+# add cors support
+CORS(app, resources={r"/*": {"origins": "0.0.0.0"}})
 
 
 @app.teardown_appcontext

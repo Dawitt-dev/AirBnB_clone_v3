@@ -1,4 +1,4 @@
-#!/usr/bin.python3
+#!/usr/bin/python3
 """a view for Place objects that handles all default RESTFul API actions"""
 
 from flask import Flask, jsonify, abort, request

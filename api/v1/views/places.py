@@ -8,6 +8,7 @@ from api.v1.views import app_views
 from models.city import City
 from models.user import User
 
+
 @app_views.route('/cities/<city_id>/places', methods=['GET'],
                  strict_slashes=False)
 def retrieve_places(city_id):
